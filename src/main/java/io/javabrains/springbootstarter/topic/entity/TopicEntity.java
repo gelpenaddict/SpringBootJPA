@@ -1,10 +1,10 @@
-package io.javabrains.springbootstarter.topic;
+package io.javabrains.springbootstarter.topic.entity;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 
 @Entity // Tells JPA to create a table
-public class Topic {
+public class TopicEntity {
 
     // TODO: try Lombok @Data, @NoArgsConstructor, @AllArgsContructor
 
@@ -14,10 +14,10 @@ public class Topic {
 
     private String description;
 
-    public Topic() {
+    public TopicEntity() {
     }
 
-    public Topic(String id, String name, String description) {
+    public TopicEntity(String id, String name, String description) {
         this.id = id;
         this.name = name;
         this.description = description;

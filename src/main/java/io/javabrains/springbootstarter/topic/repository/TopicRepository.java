@@ -1,11 +1,10 @@
-package io.javabrains.springbootstarter.topic;
+package io.javabrains.springbootstarter.topic.repository;
 
+import io.javabrains.springbootstarter.topic.entity.TopicEntity;
 import org.springframework.data.repository.CrudRepository;
-import org.springframework.stereotype.Repository;
 
 
-@Repository
-public interface TopicRepository extends CrudRepository<Topic, String> {
+public interface TopicRepository extends CrudRepository<TopicEntity, String> {
     // JPA does these for you when extending CrudRepository:
     // - getAllTopics()
     // - getTopic(String id)
