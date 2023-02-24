@@ -23,8 +23,7 @@ public class TopicController {
     @Autowired makes Spring look in registry,
     sees that a TopicService @Service instance already exists, and injects it.
      */
-    @Autowired
-    public TopicController(@NonNull TopicService topicService) {
+    public TopicController(TopicService topicService) {
         this.topicService = topicService;
     }
 
@@ -39,7 +38,7 @@ public class TopicController {
         return topicService.getTopic(id);
     }
 
-    @RequestMapping(value = "/topics", method = RequestMethod.POST)
+//    @RequestMapping(value = "/topics", method = RequestMethod.POST)
     @PostMapping("/topics")
     public void addTopic(@RequestBody Topic topic) {
         topicService.addTopic(topic);

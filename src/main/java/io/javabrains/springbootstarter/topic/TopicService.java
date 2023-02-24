@@ -21,10 +21,10 @@ public class TopicService {
     }
 
     public List<Topic> getAllTopics() {
-        List<Topic> topics = new ArrayList<>();
-        topicRepository
-            .findAll()
-            .forEach(topics::add);
+        List<Topic> topics = new ArrayList<>(
+            topicRepository.findAll()
+        );
+        System.out.printf("Got %d topics.", topics.size());
         return topics;
     }
 
